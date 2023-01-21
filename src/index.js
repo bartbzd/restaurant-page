@@ -3,11 +3,22 @@ import './styles.css';
 
 const header = () => {
   const nav = document.createElement('div');
-  const p = document.createElement('p');
+  const navItems = document.createElement('div');
+  const text = () => document.createElement('p');
+
   document.body.appendChild(nav);
-  nav.appendChild(p);
+  nav.appendChild(text());
+  nav.appendChild(navItems);
   nav.classList.add('nav-bar');
-  p.textContent = 'Tester';
+  navItems.classList.add('nav-items');
+
+  navItems.appendChild(text()).classList.add('home');
+  navItems.appendChild(text()).classList.add('menu');
+  navItems.appendChild(text()).classList.add('contact');
+
+  document.querySelector('.home').textContent = 'HOME';
+  document.querySelector('.menu').textContent = 'MENU';
+  document.querySelector('.contact').textContent = 'CONTACT';
 };
 header();
 // eslint-disable-next-line no-console
