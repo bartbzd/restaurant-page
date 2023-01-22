@@ -4,7 +4,8 @@
   // border: 1px solid red;
   font-family: 'Dosis', sans-serif;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 20px;
+  box-sizing: border-box;
 }
 body {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
@@ -23,16 +24,96 @@ body {
 }
 .logo {
   width: auto;
-  height: 60px;
+  height: 50px;
   margin-left: 30px;
 }
 .nav-items {
+  position: absolute;
+  left: 50%;
   display: flex;
   margin-right: 30px;
-  color: #c2fdac;
-  & .home,
-  .menu,
+  color: #97f0ad;
+  & .menu,
   .contact {
-    margin-left: 30px;
+    margin-left: 40px;
+  }
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  // width: 50%;
+  margin-left: 60px;
+  // background-image: url('./img/only-plant.png');
+}
+
+.hero-text {
+  height: auto;
+  width: 50%;
+  margin-top: 160px;
+}
+.order-btn {
+  color: #2a423a;
+  width: 180px;
+  height: 60px;
+  margin-top: 160px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  transition: 0.5s;
+  background-size: 200% auto;
+  background-image: linear-gradient(to right, #90fcc3 0%, #e0fea2 51%, #90fcc3 100%);
+  &:hover {
+    background-position: right center;
+  }
+}
+.leaf {
+  position: absolute;
+  bottom: -5%;
+  width: 70%;
+  // height: 25%;
+  margin-left: 20%;
+  animation: 0.5s ease-in-out 0s 1 wiggle;
+}
+@keyframes wiggle {
+  0% {
+    transform: rotateZ(0) translateY(40%);
+  }
+  20% {
+    transform: rotateZ(-2deg) translateY(30%);
+  }
+  40% {
+    transform: rotateZ(3deg) translateY(20%);
+  }
+  60% {
+    transform: rotateZ(-3deg) translateY(10%);
+  }
+  80% {
+    transform: rotateZ(3deg) translateY(5%);
+  }
+  90% {
+    transform: rotateZ(-2deg) translateY(3%);
+  }
+  95% {
+    transform: rotateZ(3deg) translateY(2%);
+  }
+  100% {
+    transform: rotateZ(0) translateY(0);
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .leaf {
+    width: 100%;
+    margin-left: 0;
+  }
+  .main {
+    margin-left: 40px;
+  }
+  .hero-text {
+    margin-top: 80px;
+    width: 90%;
   }
 }
