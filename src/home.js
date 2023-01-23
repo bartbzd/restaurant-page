@@ -9,7 +9,7 @@ export default function home() {
 
   const btn = document.createElement('button');
   btn.classList.add('order-btn');
-  btn.textContent = 'Order Now';
+  btn.textContent = 'Order Online';
   container.appendChild(hero);
   container.appendChild(btn);
 
