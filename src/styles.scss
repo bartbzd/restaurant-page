@@ -94,14 +94,15 @@ body {
   }
 }
 .order-btn {
-  font-size: 22px;
+  font-size: 20px;
+  font-weight: 700;
   color: #2a423a;
-  width: 180px;
-  height: 60px;
+  width: 150px;
+  height: 55px;
   margin-top: 160px;
   border: none;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
 
   transition: 0.5s;
   background-size: 200% auto;
@@ -111,11 +112,37 @@ body {
     transform: scale(1.03);
   }
 }
+.store-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  // margin-left: 15px;
+  // margin-top: 30px;
+
+  position: absolute;
+  left: 43px;
+  bottom: 40px;
+}
+.fa-location-dot {
+  color: #182a23;
+}
+.hours {
+  // margin-left: 30px;
+  // margin-top: 10px;
+  color: #90fcc3;
+  background: linear-gradient(30deg, #392a1b 0%, #657447 51%, #392a1b 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
 .git-leaf {
   width: 100%;
   z-index: 2;
   position: relative;
   right: -10%;
+  animation: sidewigglereverse 1.5s;
 }
 .wrapper {
   position: absolute;
@@ -136,6 +163,7 @@ body {
   right: 0;
   // transition: 0.5s;
   animation: growslide 1s;
+  filter: blur(1px);
 }
 @keyframes growslide {
   0% {
@@ -167,6 +195,27 @@ body {
     transform: translateX(80%) translateY(-40%);
   }
 }
+@keyframes sidewigglereverse {
+  0% {
+    transform: rotateZ(0) translateX(80%) translateY(-40%);
+  }
+  10% {
+    transform: rotateZ(5deg) translateX(52%) translateY(-28%);
+  }
+  18% {
+    transform: rotateZ(-10deg) translateX(26%) translateY(-14%);
+  }
+  37% {
+    transform: translateX(0) translateY(0);
+  }
+  60% {
+    transform: rotateZ(15deg) translateX(-10%) translateY(-25%);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
 @keyframes wiggle {
   0% {
     transform: rotateZ(0) translateY(40%);
@@ -222,13 +271,7 @@ body {
     top: 25%;
   }
   .order-btn {
-    position: absolute;
-    // text-align: center;
-    top: 50%;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 30%;
   }
 }
 @media screen and (max-width: 770px) {
@@ -257,11 +300,16 @@ body {
     transform: rotateZ(-4deg);
   }
   .order-btn {
-    top: 55%;
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
   .leaf {
-    width: 100%;
-    margin-left: 0;
+    width: 80%;
+    margin-left: 30;
   }
 }
 @media screen and (max-width: 428px) {
