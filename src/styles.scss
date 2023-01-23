@@ -213,6 +213,9 @@ body {
   }
 }
 @media screen and (max-width: 428px) {
+  body {
+    min-height: 100vh;
+  }
   .nav-bar {
     justify-content: center;
     flex-direction: column;
@@ -236,11 +239,10 @@ body {
     right: 15px;
   }
   .git-leaf {
-    height: 80%;
-    width: auto;
     right: -25%;
   }
   .wrapper {
+    overflow-x: hidden;
     height: 85px;
     width: 121px;
   }
