@@ -5,22 +5,25 @@
   font-family: 'Dosis', sans-serif;
   font-weight: 600;
   font-size: 20px;
+  text-decoration: dotted;
   box-sizing: border-box;
 }
+
 body {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
   background-size: cover; //2100px 100%
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 1300px;
-  overflow-y: hidden;
+  // min-height: 1300px;
+  height: 100vh;
+  overflow: hidden;
 }
 .nav-bar {
   display: flex;
   width: 100%;
   height: 120px;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: flex-start;
 }
 .logo {
   width: auto;
@@ -28,10 +31,11 @@ body {
   margin-left: 30px;
 }
 .nav-items {
-  position: absolute;
-  left: 40%;
+  // position: absolute;
+  // left: 40%;
   display: flex;
   margin-right: 30px;
+  margin-left: 5%;
   cursor: pointer;
   color: #182a23; //#97f0ad;
   & .menu,
@@ -124,7 +128,23 @@ body {
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
 }
-
+.cup {
+  z-index: -1;
+  width: 45%; //738px;
+  position: absolute;
+  top: 20%;
+  right: 0;
+  // transition: 0.5s;
+  animation: growslide 1s;
+}
+@keyframes growslide {
+  0% {
+    transform: scale(0.9) translateX(-20%);
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
 .leaf {
   position: absolute;
   bottom: -5%;
@@ -174,7 +194,7 @@ body {
   }
 }
 
-@media screen and (max-width: 996px) {
+@media screen and (max-width: 1140px) {
   .logo {
     width: 20%;
     height: auto;
@@ -184,24 +204,38 @@ body {
     // height: 5%;
   }
   .wrapper {
-    height: 30%;
+    height: 110px;
   }
   .leaf {
-    width: 100%;
-    margin-left: 0;
+    width: 85%;
+    margin-left: 10%;
   }
   .main {
     margin-left: 40px;
   }
   .hero-text {
-    margin-top: 80px;
-    width: 90%;
+    margin-top: 40px;
+    width: 80%;
+  }
+  .cup {
+    width: 480px;
+    top: 25%;
+  }
+  .order-btn {
+    position: absolute;
+    // text-align: center;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 @media screen and (max-width: 770px) {
-  .nav-items {
-    margin-left: -10%;
+  .hero-text {
+    width: 90%;
   }
+
   .git-leaf {
     height: 90%;
     width: auto;
@@ -211,10 +245,28 @@ body {
     height: 106px;
     width: 121px;
   }
+  // .hero-text {
+  //   width: 70%;
+  // }
+  body {
+    min-height: 120vh;
+  }
+  .cup {
+    top: 30%;
+    right: -3%;
+    transform: rotateZ(-4deg);
+  }
+  .order-btn {
+    top: 55%;
+  }
+  .leaf {
+    width: 100%;
+    margin-left: 0;
+  }
 }
 @media screen and (max-width: 428px) {
   body {
-    min-height: 100vh;
+    min-height: 140vh;
   }
   .nav-bar {
     justify-content: center;
@@ -245,5 +297,15 @@ body {
     overflow-x: hidden;
     height: 85px;
     width: 121px;
+  }
+  .cup {
+    width: 80%;
+    top: 35%;
+  }
+  .hero-text {
+    width: 90%;
+  }
+  .order-btn {
+    top: 50%;
   }
 }
