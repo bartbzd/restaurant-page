@@ -29,13 +29,40 @@ body {
 }
 .nav-items {
   position: absolute;
-  left: 50%;
+  left: 40%;
   display: flex;
   margin-right: 30px;
-  color: #97f0ad;
+  cursor: pointer;
+  color: #182a23; //#97f0ad;
   & .menu,
   .contact {
-    margin-left: 40px;
+    padding-left: 30px;
+  }
+}
+.home,
+.menu,
+.contact,
+.github-link {
+  transition: 0.5s;
+  &:hover {
+    color: #90fcc3;
+    background: linear-gradient(30deg, #90fcc3 0%, #e0fea2 51%, #90fcc3 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+  }
+}
+.github-link {
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  margin-right: 0px;
+  color: #182a23;
+  &:hover {
+    transform: scale(1.07);
   }
 }
 .main {
@@ -50,25 +77,54 @@ body {
   height: auto;
   width: 50%;
   margin-top: 160px;
+  animation: 0.6s ease-in-out 0s 1 simmer;
+}
+@keyframes simmer {
+  0% {
+    filter: blur(3px);
+    transform: scale(0.95);
+  }
+  100% {
+    filter: blur(0px);
+    transform: scale(1);
+  }
 }
 .order-btn {
+  font-size: 22px;
   color: #2a423a;
   width: 180px;
   height: 60px;
   margin-top: 160px;
   border: none;
   border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px,
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 
   transition: 0.5s;
   background-size: 200% auto;
   background-image: linear-gradient(to right, #90fcc3 0%, #e0fea2 51%, #90fcc3 100%);
   &:hover {
     background-position: right center;
+    transform: scale(1.03);
   }
 }
+.git-leaf {
+  width: 100%;
+  z-index: 2;
+  position: relative;
+  right: -10%;
+}
+.wrapper {
+  position: absolute;
+  // width: 20%;
+  top: 0;
+  right: 0;
+}
+.wrapper:hover .git-leaf {
+  animation: sidewiggle 0.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+}
+
 .leaf {
   position: absolute;
   bottom: -5%;
@@ -76,6 +132,20 @@ body {
   // height: 25%;
   margin-left: 20%;
   animation: 0.5s ease-in-out 0s 1 wiggle;
+}
+@keyframes sidewiggle {
+  0% {
+    transform: rotateZ(0) translateX(0) translateY(0);
+  }
+  25% {
+    transform: rotateZ(-5deg) translateX(26%) translateY(-14%);
+  }
+  75% {
+    transform: rotateZ(5deg) translateX(52%) translateY(-28%);
+  }
+  100% {
+    transform: translateX(80%) translateY(-40%);
+  }
 }
 @keyframes wiggle {
   0% {
@@ -105,6 +175,17 @@ body {
 }
 
 @media screen and (max-width: 996px) {
+  .logo {
+    width: 20%;
+    height: auto;
+  }
+  .git-leaf {
+    width: 100%;
+    // height: 5%;
+  }
+  .wrapper {
+    height: 30%;
+  }
   .leaf {
     width: 100%;
     margin-left: 0;
@@ -115,5 +196,52 @@ body {
   .hero-text {
     margin-top: 80px;
     width: 90%;
+  }
+}
+@media screen and (max-width: 770px) {
+  .nav-items {
+    margin-left: -10%;
+  }
+  .git-leaf {
+    height: 90%;
+    width: auto;
+    // right: -10%;
+  }
+  .wrapper {
+    height: 106px;
+    width: 121px;
+  }
+}
+@media screen and (max-width: 428px) {
+  .nav-bar {
+    justify-content: center;
+    flex-direction: column;
+  }
+  .logo {
+    position: absolute;
+    top: 15px;
+    margin-left: 15px;
+    justify-content: center;
+    height: 50px;
+    width: auto;
+  }
+  .nav-items {
+    position: static;
+    margin-right: 0;
+    margin-left: 15px;
+    margin-top: 100px;
+  }
+  .github-link {
+    top: 20px;
+    right: 15px;
+  }
+  .git-leaf {
+    height: 80%;
+    width: auto;
+    right: -25%;
+  }
+  .wrapper {
+    height: 85px;
+    width: 121px;
   }
 }
