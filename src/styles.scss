@@ -9,7 +9,7 @@
   box-sizing: border-box;
 }
 
-body {
+#content {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
   background-size: cover; //2100px 100%
   background-position: center;
@@ -108,6 +108,7 @@ body {
   transition: 0.5s;
   background-size: 200% auto;
   background-image: linear-gradient(to right, #90fcc3 0%, #e0fea2 51%, #90fcc3 100%);
+  animation: 0.6s ease-in-out 0s 1 simmer;
   &:hover {
     background-position: right center;
     transform: scale(1.03);
@@ -152,7 +153,7 @@ body {
   animation-iteration-count: 1;
 }
 .cup {
-  z-index: -1;
+  // z-index: -1;
   width: 47%; //738px;
   position: absolute;
   top: 20%;
@@ -286,7 +287,7 @@ body {
   // .hero-text {
   //   width: 70%;
   // }
-  body {
+  #content {
     min-height: 120vh;
   }
   .cup {
@@ -306,9 +307,13 @@ body {
     width: 80%;
     margin-left: 30;
   }
+  .nav-items {
+    margin-left: 3%;
+  }
 }
+
 @media screen and (max-width: 428px) {
-  body {
+  #content {
     min-height: 140vh;
   }
   .nav-bar {
