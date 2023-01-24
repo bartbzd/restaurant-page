@@ -3,21 +3,23 @@ import Cups from './img/menu-icons.png';
 export default function menu() {
   const container = document.createElement('div');
   const div = () => document.createElement('div');
-  container.classList.add('menu-section');
-  container.appendChild(div()).classList.add('left');
-  container.appendChild(div()).classList.add('right');
+  container.className = 'menu-section';
+  container.appendChild(div()).className = 'left';
+  container.appendChild(div()).className = 'right';
 
   const img = new Image();
-  img.classList.add('menu-img');
+  img.className = 'menu-img';
   img.src = Cups;
-  container.querySelector('.left').appendChild(img);
-  const h3 = document.createElement('h3');
-  h3.classList.add('card-title');
-  h3.textContent = 'Tester Title';
-  container.querySelector('.right').appendChild(h3);
+  container.querySelector('.left').append(img);
 
+  const h3 = document.createElement('h3');
+  h3.className = 'card-title';
+  h3.append('Tester Title');
+
+  const textbox = container.querySelector('.right');
   const p = () => document.createElement('p');
-  container.querySelector('.right').appendChild(p()).classList.add('card-body');
+  textbox.append(h3);
+  textbox.appendChild(p()).className = 'card-body';
 
   container.querySelector('.card-body').textContent =
     'Fake tester text to explain this coffee menu item';

@@ -2,43 +2,44 @@ import Logo from './img/logo.png';
 import Gitleaf from './img/git-plant.png';
 
 export default function header() {
+  const navItems = document.createElement('div');
+  const text = () => document.createElement('p');
   const nav = document.createElement('div');
   const logo = new Image();
   logo.src = Logo;
-  const navItems = document.createElement('div');
-  const text = () => document.createElement('p');
 
-  nav.appendChild(logo);
-  nav.appendChild(navItems);
-  nav.classList.add('nav-bar');
-  logo.classList.add('logo');
-  navItems.classList.add('nav-items');
+  navItems.className = 'nav-items';
+  nav.className = 'nav-bar';
+  logo.className = 'logo';
 
-  navItems.appendChild(text()).classList.add('home');
-  navItems.appendChild(text()).classList.add('menu');
-  navItems.appendChild(text()).classList.add('contact');
+  nav.append(logo, navItems);
+  navItems.appendChild(text()).className = 'about';
+  navItems.appendChild(text()).className = 'menu';
+  navItems.appendChild(text()).className = 'contact';
 
-  nav.querySelector('.home').textContent = 'ABOUT';
-  nav.querySelector('.menu').textContent = 'MENU';
-  nav.querySelector('.contact').textContent = 'CONTACT';
+  navItems.querySelector('.about').append('ABOUT');
+  navItems.querySelector('.menu').append('MENU');
+  navItems.querySelector('.contact').append('CONTENT');
 
   return nav;
 }
 
 export function gitLeaf() {
-  const ghLink = document.createElement('a');
-  ghLink.classList.add('github-link');
-  const ghIcon = document.createElement('i');
-  ghIcon.classList.add('fab', 'fa-github', 'fa-2x');
-  const topLeaf = new Image();
-  topLeaf.classList.add('git-leaf');
-  topLeaf.src = Gitleaf;
   const wrapper = document.createElement('div');
-  wrapper.classList.add('wrapper');
-  document.querySelector('.nav-bar').appendChild(wrapper);
-  wrapper.appendChild(topLeaf);
-  wrapper.appendChild(ghLink);
-  ghLink.appendChild(ghIcon);
+  const i = document.createElement('i');
+  const a = document.createElement('a');
+  const topLeaf = new Image();
+  topLeaf.src = Gitleaf;
+
+  i.className = 'fab fa-github fa-2x';
+  topLeaf.className = 'git-leaf';
+  wrapper.className = 'wrapper';
+  a.className = 'github-link';
+
+  document.body.append(wrapper); //document.querySelector('.nav-bar')
+  wrapper.append(topLeaf);
+  wrapper.append(a);
+  a.append(i);
 
   return wrapper;
 }
