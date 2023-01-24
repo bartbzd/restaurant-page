@@ -22,15 +22,17 @@ content.append(home(), cup);
 
 const homePage = document.querySelector('.logo');
 const menuItem = document.querySelector('.menu');
-const menuItems = container.querySelector('.about', '.menu', '.contact');
 
 homePage.addEventListener('click', () => {
+  const navItems = document.querySelectorAll(['.about', '.menu', '.contact']);
   content.innerHTML = '';
   content.append(home());
   content.append(cup);
   leaf.classList.remove('reverse');
   container.append(leaf);
-  menuItems.classList.remove('active');
+  navItems.forEach((item) => {
+    item.classList.remove('active');
+  });
 });
 
 //aboutItem
