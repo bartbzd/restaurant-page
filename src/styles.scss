@@ -8,22 +8,23 @@
   text-decoration: dotted;
   box-sizing: border-box;
 }
-
-#content {
+body {
+  overflow: hidden;
+}
+#container {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
   background-size: cover; //2100px 100%
   background-position: center;
   background-repeat: no-repeat;
   // min-height: 1300px;
   height: 100vh;
-  overflow: hidden;
 }
 .nav-bar {
   display: flex;
   width: 100%;
   height: 120px;
   align-items: center;
-  // justify-content: flex-start;
+  // justify-container: flex-start;
 }
 .logo {
   width: auto;
@@ -58,6 +59,15 @@
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
   }
+}
+.active {
+  color: #90fcc3;
+  background: linear-gradient(30deg, #90fcc3 0%, #e0fea2 51%, #90fcc3 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
 }
 .github-link {
   z-index: 1;
@@ -159,7 +169,7 @@
   top: 20%;
   right: 0;
   // transition: 0.5s;
-  animation: growslide 1s;
+  animation: growslide 0.5s;
 }
 @keyframes growslide {
   0% {
@@ -176,6 +186,16 @@
   // height: 25%;
   margin-left: 20%;
   animation: 0.5s ease-in-out 0s 1 wiggle;
+}
+.menu-section {
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+.menu-img {
+  height: 60%;
 }
 @keyframes sidewiggle {
   0% {
@@ -287,7 +307,7 @@
   // .hero-text {
   //   width: 70%;
   // }
-  #content {
+  #container {
     min-height: 120vh;
   }
   .cup {
@@ -313,18 +333,18 @@
 }
 
 @media screen and (max-width: 428px) {
-  #content {
+  #container {
     min-height: 140vh;
   }
   .nav-bar {
-    justify-content: center;
+    justify-container: center;
     flex-direction: column;
   }
   .logo {
     position: absolute;
     top: 15px;
     margin-left: 15px;
-    justify-content: center;
+    justify-container: center;
     height: 50px;
     width: auto;
   }
