@@ -22,7 +22,7 @@ container.appendChild(content);
 container.appendChild(gitLeaf());
 content.appendChild(home());
 content.appendChild(cup);
-content.appendChild(leaf);
+container.appendChild(leaf);
 
 const homePage = document.querySelector('.logo');
 const menuItem = document.querySelector('.menu');
@@ -31,14 +31,20 @@ homePage.addEventListener('click', () => {
   content.innerHTML = '';
   content.appendChild(home());
   content.appendChild(cup);
-  content.appendChild(leaf);
+  container.querySelector('.leaf').classList.remove('reverse');
+  container.appendChild(leaf);
   container.querySelector('.menu', '.about', '.contact').classList.toggle('active');
 });
+//aboutItem
+
 menuItem.addEventListener('click', () => {
   content.innerHTML = '';
   content.appendChild(menu());
-  container.querySelector('.menu').classList.toggle('active');
+  container.querySelector('.menu').classList.add('active');
+  container.querySelector('.leaf').classList.add('reverse');
+  container.appendChild(leaf);
 });
+//contactItem
 
 //Add menu content, img and text cards
 //Animate bottom leaf position on menu page load

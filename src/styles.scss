@@ -183,9 +183,14 @@ body {
   position: absolute;
   bottom: -5%;
   width: 70%;
-  // height: 25%;
   margin-left: 20%;
   animation: 0.5s ease-in-out 0s 1 wiggle;
+}
+.reverse {
+  animation-play-state: paused;
+  animation: 0.5s ease-in-out 0s wiggle;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
 }
 .menu-section {
   display: flex;
