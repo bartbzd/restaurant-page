@@ -24,7 +24,7 @@ body {
   width: 100%;
   height: 120px;
   align-items: center;
-  // justify-container: flex-start;
+  // justify-content: flex-start;
 }
 .logo {
   width: auto;
@@ -44,7 +44,7 @@ body {
     padding-left: 30px;
   }
 }
-.home,
+.about,
 .menu,
 .contact,
 .github-link,
@@ -342,14 +342,14 @@ body {
     min-height: 140vh;
   }
   .nav-bar {
-    justify-container: center;
+    justify-content: center;
     flex-direction: column;
   }
   .logo {
     position: absolute;
     top: 15px;
     margin-left: 15px;
-    justify-container: center;
+    justify-content: center;
     height: 50px;
     width: auto;
   }
