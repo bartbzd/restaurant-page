@@ -8,10 +8,6 @@ export default function header() {
   const navItems = document.createElement('div');
   const text = () => document.createElement('p');
 
-  const ghLink = document.createElement('a');
-  ghLink.classList.add('github-link');
-  const ghIcon = document.createElement('i');
-  ghIcon.classList.add('fab', 'fa-github', 'fa-2x');
   nav.appendChild(logo);
   nav.appendChild(navItems);
   nav.classList.add('nav-bar');
@@ -26,15 +22,23 @@ export default function header() {
   nav.querySelector('.menu').textContent = 'MENU';
   nav.querySelector('.contact').textContent = 'CONTACT';
 
-  const gitLeaf = new Image();
-  gitLeaf.classList.add('git-leaf');
-  gitLeaf.src = Gitleaf;
+  return nav;
+}
+
+export function gitLeaf() {
+  const ghLink = document.createElement('a');
+  ghLink.classList.add('github-link');
+  const ghIcon = document.createElement('i');
+  ghIcon.classList.add('fab', 'fa-github', 'fa-2x');
+  const topLeaf = new Image();
+  topLeaf.classList.add('git-leaf');
+  topLeaf.src = Gitleaf;
   const wrapper = document.createElement('div');
   wrapper.classList.add('wrapper');
-  nav.appendChild(wrapper);
-  wrapper.appendChild(gitLeaf);
+  document.querySelector('.nav-bar').appendChild(wrapper);
+  wrapper.appendChild(topLeaf);
   wrapper.appendChild(ghLink);
   ghLink.appendChild(ghIcon);
 
-  return nav;
+  return wrapper;
 }
