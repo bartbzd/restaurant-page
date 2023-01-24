@@ -22,7 +22,7 @@ export default function header() {
   navItems.appendChild(text()).classList.add('menu');
   navItems.appendChild(text()).classList.add('contact');
 
-  nav.querySelector('.home').textContent = 'HOME';
+  nav.querySelector('.home').textContent = 'ABOUT';
   nav.querySelector('.menu').textContent = 'MENU';
   nav.querySelector('.contact').textContent = 'CONTACT';
 
