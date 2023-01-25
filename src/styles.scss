@@ -38,6 +38,7 @@ body {
   margin-right: 30px;
   margin-left: 5%;
   cursor: pointer;
+  user-select: none;
   color: #343634; //#97f0ad;
   & .menu,
   .contact {
@@ -80,12 +81,12 @@ body {
     transform: scale(1.07);
   }
 }
+
+//HOME
 .main {
   display: flex;
   flex-direction: column;
-  // width: 50%;
   margin-left: 60px;
-  // background-image: url('./img/only-plant.png');
 }
 
 .hero-text {
@@ -192,16 +193,38 @@ body {
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
+
+//MENU
 .menu-section {
+  //#ABB090
+
+  backdrop-filter: blur(30px);
+  // border: 1px solid red;
+  border-radius: 40px;
   display: flex;
   justify-content: center;
-  width: 60%;
+  width: 625px;
+  height: 675px;
   margin: 0 auto;
-  margin-top: 60px;
+  margin-top: 40px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+}
+.left {
+  background-color: #12282085;
+  width: 35%;
+  display: flex;
 }
 .menu-img {
-  height: 60%;
+  height: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
 }
+.right {
+  width: 75%;
+  background-color: #cccbce35;
+}
+
 @keyframes sidewiggle {
   0% {
     transform: rotateZ(0) translateX(0) translateY(0);
@@ -299,7 +322,6 @@ body {
   .hero-text {
     width: 90%;
   }
-
   .git-leaf {
     height: 90%;
     width: auto;
@@ -309,9 +331,6 @@ body {
     height: 106px;
     width: 121px;
   }
-  // .hero-text {
-  //   width: 70%;
-  // }
   #container {
     min-height: 120vh;
   }
@@ -334,6 +353,14 @@ body {
   }
   .nav-items {
     margin-left: 3%;
+  }
+  .menu-section {
+    width: 80%;
+    height: 550px;
+  }
+  .menu-img {
+    height: 95%;
+    margin: auto;
   }
 }
 
@@ -388,4 +415,19 @@ body {
   .leaf {
     margin-left: 20%;
   }
+  .menu-section {
+    width: 80%;
+  }
 }
+
+// .menu-section {
+//   width: 90%;
+//   height: 400px;
+// }
+// .left {
+//   height: 100%;
+// }
+// .menu-img {
+//   width: 100%;
+//   height: auto;
+// }
