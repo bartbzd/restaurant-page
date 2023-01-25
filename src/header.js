@@ -19,7 +19,7 @@ export default function header() {
 
   navItems.querySelector('.about').append('ABOUT');
   navItems.querySelector('.menu').append('MENU');
-  navItems.querySelector('.contact').append('CONTENT');
+  navItems.querySelector('.contact').append('CONTACT');
 
   return nav;
 }
