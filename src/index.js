@@ -14,39 +14,40 @@ cup.src = Cup;
 
 const container = document.querySelector('#container');
 const content = document.createElement('div');
-// content.classList.add('main-container');
-
 container.append(header(), content);
 container.append(gitLeaf(), leaf);
 content.append(home(), cup);
 
+const nav = ['.about', '.menu', '.contact'];
+const navItems = document.querySelectorAll(nav);
 const homePage = document.querySelector('.logo');
 const menuItem = document.querySelector('.menu');
 
-homePage.addEventListener('click', () => {
-  const navItems = document.querySelectorAll(['.about', '.menu', '.contact']);
-  content.innerHTML = '';
-  content.append(home());
-  content.append(cup);
-  leaf.classList.remove('reverse');
+function renderHome() {
+  //   content.innerHTML = '';
+  content.replaceChildren(home(), cup);
+  //   content.append(cup);
   container.append(leaf);
+  leaf.classList.remove('reverse');
   navItems.forEach((item) => {
     item.classList.remove('active');
   });
-});
+}
 
 //aboutItem
 
-menuItem.addEventListener('click', () => {
-  content.innerHTML = '';
-  content.append(menu());
+function renderMenu() {
+  //   content.innerHTML = '';
+  content.replaceChildren(menu());
   container.append(leaf);
-  menuItem.classList.add('active');
   leaf.classList.add('reverse');
-});
+  menuItem.classList.add('active');
+}
+
+homePage.addEventListener('click', renderHome);
+menuItem.addEventListener('click', renderMenu);
 //contactItem
 
-//refactor code
 //Add menu content and text cards, style
 //Add Find A Store to every page
 //Add about.js and content
