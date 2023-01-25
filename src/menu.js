@@ -12,17 +12,19 @@ export default function menu() {
   img.src = Cups;
   container.querySelector('.left').append(img);
 
-  const h3 = document.createElement('h3');
-  h3.className = 'card-title';
-  h3.append('Tester Title');
-
-  const textbox = container.querySelector('.right');
+  const box = container.querySelector('.right');
+  const h3 = () => document.createElement('h3');
   const p = () => document.createElement('p');
-  textbox.append(h3);
-  textbox.appendChild(p()).className = 'card-body';
+  //   box.appendChild(p()).className = 'card-body';
 
-  container.querySelector('.card-body').textContent =
-    'Fake tester text to explain this coffee menu item';
+  for (let i = 1; i < 5; i += 1) {
+    box.appendChild(div()).className = `co-${i}`;
+  }
+  for (let i = 1; i < 5; i += 1) {
+    const titles = ['JJ Favorite', 'Cappucino', 'Cinna Twister', 'Classic Black'];
+    const title = box.querySelector(`.co-${i}`);
+    title.appendChild(h3()).append(titles[i - 1]);
+  }
 
   return container;
 }
