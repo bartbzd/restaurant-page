@@ -26,7 +26,6 @@ const menuItem = document.querySelector('.menu');
 function renderHome() {
   //   content.innerHTML = '';
   content.replaceChildren(home(), cup);
-  //   content.append(cup);
   container.append(leaf);
   leaf.classList.remove('reverse');
   navItems.forEach((item) => {
@@ -37,9 +36,8 @@ function renderHome() {
 //aboutItem
 
 function renderMenu() {
-  //   content.innerHTML = '';
-  content.replaceChildren(menu());
   container.append(leaf);
+  content.replaceChildren(menu());
   leaf.classList.add('reverse');
   menuItem.classList.add('active');
 }
@@ -48,7 +46,6 @@ homePage.addEventListener('click', renderHome);
 menuItem.addEventListener('click', renderMenu);
 //contactItem
 
-//Add menu content and text cards, style
 //Add Find A Store to every page
 //Add about.js and content
 //Add contact.js and content
