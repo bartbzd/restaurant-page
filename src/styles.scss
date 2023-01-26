@@ -184,7 +184,7 @@ body {
 .leaf {
   position: absolute;
   bottom: -5%;
-  width: 70%;
+  width: 60%;
   margin-left: 20%;
   animation: 0.5s ease-in-out 0s 1 wiggle;
 }
@@ -195,6 +195,38 @@ body {
   animation-fill-mode: forwards;
 }
 //ABOUT
+.about-section {
+  width: 625px;
+  height: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 35px 35px;
+  overflow: hidden;
+  backdrop-filter: blur(40px) brightness(1.15);
+  border-radius: 40px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+  animation: 0.3s ease-out 0s 1 moveup;
+  h3 {
+    color: #343634;
+    font-size: 22px;
+    padding-bottom: 10px;
+    // flex: 50%;
+  }
+  p {
+    color: #464846;
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  .about-2 {
+    padding-top: 20px;
+  }
+}
+.about-pic {
+  width: 100%;
+  // height: 200px;
+  // border-radius: 5px;
+}
 .leaves {
   position: absolute;
   left: -18%;
