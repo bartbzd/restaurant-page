@@ -4,6 +4,8 @@ import Cup from './img/only-cup.png';
 import header, { gitLeaf } from './header';
 import home from './home';
 import menu from './menu';
+import about from './about';
+import contact from './contact';
 
 const leaf = new Image();
 const cup = new Image();
@@ -21,31 +23,49 @@ content.append(home(), cup);
 const nav = ['.about', '.menu', '.contact'];
 const navItems = document.querySelectorAll(nav);
 const homePage = document.querySelector('.logo');
+const aboutItem = document.querySelector('.about');
 const menuItem = document.querySelector('.menu');
+const contactItem = document.querySelector('.contact');
 
+function removeActive() {
+  navItems.forEach((item) => {
+    item.classList.remove('active');
+  });
+}
 function renderHome() {
   //   content.innerHTML = '';
   content.replaceChildren(home(), cup);
   container.append(leaf);
   leaf.classList.remove('reverse');
-  navItems.forEach((item) => {
-    item.classList.remove('active');
-  });
+  removeActive();
 }
-
-//aboutItem
+function renderAbout() {
+  container.append(leaf);
+  content.replaceChildren(about());
+  leaf.classList.add('reverse');
+  removeActive();
+  aboutItem.classList.add('active');
+}
 
 function renderMenu() {
   container.append(leaf);
   content.replaceChildren(menu());
   leaf.classList.add('reverse');
+  removeActive();
   menuItem.classList.add('active');
 }
-
+function renderContact() {
+  container.append(leaf);
+  content.replaceChildren(contact());
+  leaf.classList.add('reverse');
+  removeActive();
+  contactItem.classList.add('active');
+}
 homePage.addEventListener('click', renderHome);
+aboutItem.addEventListener('click', renderAbout);
 menuItem.addEventListener('click', renderMenu);
+contactItem.addEventListener('click', renderContact);
 //contactItem
 
-//Add Find A Store to every page
 //Add about.js and content
 //Add contact.js and content
