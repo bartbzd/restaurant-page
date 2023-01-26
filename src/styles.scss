@@ -43,7 +43,7 @@ body {
   color: #343634; //#97f0ad;
   & .menu,
   .contact {
-    padding-left: 30px;
+    margin-left: 30px;
   }
 }
 .about,
@@ -190,11 +190,34 @@ body {
 }
 .reverse {
   animation-play-state: paused;
-  animation: 0.5s ease-in-out 0s wiggle;
+  animation: 0.3s ease-in-out 0s wiggle;
   animation-direction: reverse;
   animation-fill-mode: forwards;
 }
+//ABOUT
+.leaves {
+  position: absolute;
+  left: -230px;
+  top: 50%;
+  width: 500px;
+  animation: 0.3s ease-in-out 0s 1 sideabout;
 
+  transform: rotateZ(80deg);
+}
+@keyframes sideabout {
+  0% {
+    transform: rotateZ(85deg) translateY(30%);
+  }
+  25% {
+    transform: rotateZ(83deg) translateY(-10%);
+  }
+  75% {
+    transform: rotateZ(81deg) translateY(-20%);
+  }
+  100% {
+    transform: rotateZ(80deg) translateX(0) translateY(0);
+  }
+}
 //MENU
 .menu-section {
   z-index: 1;
