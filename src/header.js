@@ -35,6 +35,7 @@ export function gitLeaf() {
   topLeaf.className = 'git-leaf';
   wrapper.className = 'wrapper';
   a.className = 'github-link';
+  a.href = 'www.github.com';
 
   document.body.append(wrapper); //document.querySelector('.nav-bar')
   wrapper.append(topLeaf);
