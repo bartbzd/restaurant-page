@@ -7,6 +7,7 @@
   font-size: 20px;
   text-decoration: dotted;
   box-sizing: border-box;
+  user-select: none;
 }
 body {
   overflow: hidden;
@@ -35,7 +36,7 @@ body {
   // position: absolute;
   // left: 40%;
   display: flex;
-  margin-right: 30px;
+  // margin-right: 30px;
   margin-left: 5%;
   cursor: pointer;
   user-select: none;
@@ -174,7 +175,7 @@ body {
 }
 @keyframes growslide {
   0% {
-    transform: scale(0.9) translateX(-20%);
+    transform: scale(0.9) translateX(-10%);
   }
   100% {
     transform: scale(1) translateX(0);
@@ -196,10 +197,9 @@ body {
 
 //MENU
 .menu-section {
-  //#ABB090
-
-  backdrop-filter: blur(30px);
-  // border: 1px solid red;
+  z-index: 1;
+  // position: relative;
+  backdrop-filter: blur(40px) brightness(1.15);
   border-radius: 40px;
   display: flex;
   justify-content: center;
@@ -209,6 +209,17 @@ body {
   margin-top: 40px;
   overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 5px 5px;
+  animation: 0.3s ease-out 0s 1 moveup;
+}
+@keyframes moveup {
+  0% {
+    transform: translateY(10%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 .left {
   background-color: #12282085;
@@ -216,15 +227,53 @@ body {
   display: flex;
 }
 .menu-img {
-  height: 100%;
+  height: 101%;
   margin: 0 auto;
   padding-left: 10px;
 }
 .right {
   width: 75%;
-  background-color: #cccbce35;
-}
+  // background-color: #cccbce35;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 35px;
+  margin-bottom: 15px;
 
+  .menu-titles {
+    display: flex;
+    justify-content: space-between;
+  }
+  h3 {
+    color: #343634;
+    font-size: 22px;
+    // flex: 50%;
+  }
+  p {
+    color: #464846;
+    padding-top: 10px;
+    font-size: 17px;
+    font-weight: 600;
+  }
+  h3,
+  p {
+    pointer-events: none;
+    user-select: none;
+  }
+}
+.fresh {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+}
+.coffees {
+  z-index: 0;
+  max-height: 350px;
+  position: absolute;
+  bottom: 2%;
+  right: -75%;
+  filter: blur(15px) opacity(0.7);
+}
 @keyframes sidewiggle {
   0% {
     transform: rotateZ(0) translateX(0) translateY(0);
@@ -317,6 +366,11 @@ body {
   .order-btn {
     margin-top: 220px;
   }
+  .coffees {
+    right: -60%;
+    height: 275px;
+    filter: blur(15px) opacity(0.7);
+  }
 }
 @media screen and (max-width: 770px) {
   .hero-text {
@@ -337,7 +391,7 @@ body {
   .cup {
     top: 30%;
     right: -3%;
-    transform: rotateZ(-4deg);
+    // transform: rotateZ(-4deg);
   }
   .order-btn {
     position: absolute;
@@ -361,6 +415,22 @@ body {
   .menu-img {
     height: 95%;
     margin: auto;
+  }
+  .coffees {
+    height: 225px;
+    right: -60%;
+    bottom: 25%;
+    filter: blur(15px) opacity(0.7);
+  }
+  .right {
+    h3 {
+      font-size: 18px;
+    }
+    p {
+      padding-top: 5px;
+      font-size: 14px;
+      font-weight: 600;
+    }
   }
 }
 
@@ -401,6 +471,7 @@ body {
   .cup {
     width: 80%;
     top: 35%;
+    left: 22%;
   }
   .hero-text {
     width: 90%;
@@ -417,6 +488,25 @@ body {
   }
   .menu-section {
     width: 80%;
+    height: 420px;
+    border-radius: 25px;
+  }
+  .coffees {
+    // width: 110%;
+    height: 110px;
+    right: -40%;
+    bottom: 6%;
+    filter: blur(10px);
+  }
+  .right {
+    padding: 30px 20px;
+    // margin-bottom: 30px;
+    h3 {
+      font-size: 15px;
+    }
+    p {
+      font-size: 10px;
+    }
   }
 }
 
