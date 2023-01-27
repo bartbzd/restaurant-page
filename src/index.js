@@ -46,8 +46,6 @@ function createFooter() {
 
   container.append(storeWrapper);
   storeWrapper.appendChild(i()).className = 'fa-solid fa-location-dot fa-1x';
-  //   storeWrapper.appendChild(i()).className = 'fa-brands fa-facebook fa-1x';
-  //   storeWrapper.appendChild(i()).className = 'fa-brands fa-instagram fa-1x';
   storeWrapper.append(text);
 }
 createFooter();
