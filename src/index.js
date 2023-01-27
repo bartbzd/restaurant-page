@@ -30,12 +30,27 @@ const homePage = document.querySelector('.logo');
 const aboutItem = document.querySelector('.about');
 const menuItem = document.querySelector('.menu');
 const contactItem = document.querySelector('.contact');
-const leavesPicker = document.querySelector('.leaves');
 function removeActive() {
   navItems.forEach((item) => {
     item.classList.remove('active');
   });
 }
+function createFooter() {
+  const storeWrapper = document.createElement('div');
+  storeWrapper.className = 'store-wrapper';
+  const text = document.createElement('p');
+  text.append('Find a store');
+  text.className = 'store';
+  const a = document.createElement('a');
+  const i = () => document.createElement('i');
+
+  container.append(storeWrapper);
+  storeWrapper.appendChild(i()).className = 'fa-solid fa-location-dot fa-1x';
+  //   storeWrapper.appendChild(i()).className = 'fa-brands fa-facebook fa-1x';
+  //   storeWrapper.appendChild(i()).className = 'fa-brands fa-instagram fa-1x';
+  storeWrapper.append(text);
+}
+createFooter();
 function renderHome() {
   //   content.innerHTML = '';
   content.replaceChildren(home(), cup);
@@ -66,12 +81,9 @@ function renderContact() {
   leaf.classList.add('reverse');
   removeActive();
   contactItem.classList.add('active');
+  container.removeChild(leaves);
 }
 homePage.addEventListener('click', renderHome);
 aboutItem.addEventListener('click', renderAbout);
 menuItem.addEventListener('click', renderMenu);
 contactItem.addEventListener('click', renderContact);
-//contactItem
-
-//Add about.js and content
-//Add contact.js and content
