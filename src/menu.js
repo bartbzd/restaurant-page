@@ -42,6 +42,6 @@ export default function menu() {
   }
 
   box.appendChild(p()).className = 'fresh';
-  container.querySelector('.fresh').append('___________');
+  container.querySelector('.fresh').append('*Prices subject to change');
   return container;
 }
