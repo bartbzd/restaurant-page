@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 import About from './img/about-pic.png';
 
 export default function about() {
@@ -12,15 +13,15 @@ export default function about() {
   container.appendChild(h3()).className = 'about-title';
   container.className = 'about-section';
   container.appendChild(div()).className = 'about-1';
-  container.appendChild(aboutImg);
   container.appendChild(div()).className = 'about-2';
+  container.appendChild(aboutImg);
 
-  container.querySelector('.about-title').append('Our History');
+  container.querySelector('.about-title').append('Our Story');
   container
     .querySelector('.about-1')
     .appendChild(p())
     .append(
-      'What started as shared hobby small talk, the team at COCO quickly grew obsessed perfecting the various ways we brewed coffee and decided to go all in. Over the years, we’ve developed, mass produced and sold our own blends to share with the world, and that’s how COCO came to be.'
+      '     What started as shared hobby small talk, the team at COCO quickly grew obsessed perfecting the various ways we brewed coffee and decided to go all in. Over the years, we’ve developed, mass produced and sold our own blends to share with the world, and that’s how COCO came to be.'
     );
   container
     .querySelector('.about-1')
@@ -33,7 +34,7 @@ export default function about() {
     .querySelector('.about-2')
     .appendChild(p())
     .append(
-      'Using always fresh, 100% organic ingredients sourced from reliable and honest vendors, we stand behind our coffee, our ingredients and our technique - that’s COCO.'
+      'Using always fresh, 100% organic ingredients sourced from sustainable vendors, we stand behind our coffee, our ingredients and our technique - that’s COCO.'
     );
   return container;
 }
