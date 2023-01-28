@@ -7,6 +7,7 @@ import home from './home';
 import menu from './menu';
 import about from './about';
 import contact from './contact';
+import favicon from './img/favicon.png';
 
 const leaves = new Image();
 const leaf = new Image();
@@ -18,6 +19,12 @@ leaves.src = Leaves;
 leaf.src = Leaf;
 cup.src = Cup;
 
+const link =
+  document.querySelector("link[rel*='icon']") || document.createElement('link');
+link.type = 'image/png';
+link.rel = 'shortcut icon';
+link.href = favicon;
+document.head.append(link);
 const container = document.querySelector('#container');
 const content = document.createElement('div');
 container.append(header(), content);
