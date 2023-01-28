@@ -330,7 +330,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
     color: #666968;
     font-size: 14px;
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     right: 50px;
   }
 }
@@ -614,10 +614,9 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   .nav-items {
     margin-left: 3%;
   }
-  .menu-section,
   .about-section {
     width: 80%;
-    height: min-content;
+    height: 65%;
     h3 {
       font-size: 18px;
       margin-bottom: 1vw;
@@ -633,6 +632,10 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   }
   .about-section {
     padding: 20px 35px;
+  }
+  .menu-section {
+    width: 80%;
+    height: 550px;
   }
   .menu-img {
     height: 95%;
