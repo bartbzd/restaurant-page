@@ -8,7 +8,7 @@ export default function contact() {
   const i = () => document.createElement('i');
   const a = () => document.createElement('a');
   container.appendChild(div()).className = 'contact-text';
-  container.appendChild(div()).className = 'form';
+  container.appendChild(div()).className = 'contact-form';
   container.className = 'contact-section';
 
   const textbox = container.querySelector('.contact-text');
@@ -17,19 +17,14 @@ export default function contact() {
   textbox.appendChild(div()).className = 'social';
 
   const address = textbox.querySelector('.address');
-  address.appendChild(h3()).append('COCO. Company');
-  address.appendChild(p()).append('1123 Fake Avenue');
+  address.appendChild(h3()).append('headquarters');
+  address.appendChild(p()).append('113 Michigan Avenue');
   address.appendChild(p()).append('Chicago, IL 60661');
 
   const help = textbox.querySelector('.help');
-  help.appendChild(div()).className = 'icon-grp email';
-  help.appendChild(div()).className = 'icon-grp phone';
-  const email = textbox.querySelector('.email');
-  email.appendChild(i()).className = 'fa-solid fa-envelope';
-  email.appendChild(p()).append('help@coco.com');
-  const phone = textbox.querySelector('.phone');
-  phone.appendChild(i()).className = 'fa-solid fa-phone';
-  phone.appendChild(p()).append('+1 777 222 1234');
+  help.appendChild(h3()).append('support');
+  help.appendChild(p()).append('help@coco.com');
+  help.appendChild(p()).append('+1 777 222 1234');
 
   const social = textbox.querySelector('.social');
   social.appendChild(a()).className = 'social-icons facebook';
@@ -42,22 +37,23 @@ export default function contact() {
   const twitter = social.querySelector('.twitter');
   twitter.appendChild(i()).className = 'fa-brands fa-twitter fa-lg';
 
-  const formbox = container.querySelector('.form');
-  formbox.appendChild(h3()).append('Reach Out.');
-  formbox.appendChild(p()).append('Name');
-  formbox.appendChild(input());
-  formbox.appendChild(p()).append('Email');
-  formbox.appendChild(input());
-  formbox.appendChild(p()).append('Comments');
-  formbox.appendChild(textarea);
-  formbox.appendChild(input());
+  const formbox = container.querySelector('.contact-form');
+  formbox.appendChild(h3()).append('Lets chat.');
+  formbox.appendChild(div()).className = 'form';
+
+  const form = formbox.querySelector('.form');
+  form.appendChild(p()).append('name');
+  form.appendChild(input()).placeholder = 'John Smith';
+  form.appendChild(p()).append('email');
+  form.appendChild(input()).placeholder = 'john@email.com';
+  form.appendChild(p()).append('comments');
+  form.appendChild(textarea).placeholder = 'Type here...';
   formbox.appendChild(input()).type = 'submit';
+  formbox.querySelector('input[type=submit]').append('Test');
   //open hours
   //Mon-Fri, 9-5p CST
 
-  //Name
-  //Email
-  //Phone Number??
-  //Comments
   return container;
 }
+
+//var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
