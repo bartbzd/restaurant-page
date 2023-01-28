@@ -771,7 +771,6 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   .about-section {
     border-radius: 25px;
     padding: 15px 25px;
-    height: 430px;
     h3 {
       font-size: 16px;
     }
@@ -780,6 +779,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
     }
     .about-pic {
       border-radius: 25px;
+      width: 100%;
     }
   }
   .contact-section {
