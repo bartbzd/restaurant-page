@@ -236,7 +236,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
 .about-pic {
   width: 100%;
   border-radius: 30px;
-  padding: 8px 0;
+  margin: 10px 0;
 }
 .leaves {
   position: absolute;
@@ -324,11 +324,10 @@ $shadow-2: rgba(0, 0, 0, 0.22);
     user-select: none;
   }
   .fresh {
-    text-decoration: wavy;
-    color: #4a4c4b;
+    color: #666968;
     font-size: 14px;
     position: absolute;
-    bottom: 30px;
+    bottom: 20px;
     right: 50px;
   }
 }
@@ -572,11 +571,6 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   .order-btn {
     margin-top: 220px;
   }
-  .coffees {
-    right: -60%;
-    height: 275px;
-    filter: blur(15px) opacity(0.7);
-  }
 }
 @media screen and (max-width: 770px) {
   .hero-text {
@@ -617,19 +611,18 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   .menu-section,
   .about-section {
     width: 80%;
-    height: 550px;
+    height: min-content;
     h3 {
       font-size: 18px;
       margin-bottom: 1vw;
     }
     p {
       padding-bottom: 10px;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 600;
     }
     .about-pic {
       width: 100%;
-      margin: 0 auto;
     }
   }
   .about-section {
@@ -663,16 +656,26 @@ $shadow-2: rgba(0, 0, 0, 0.22);
       order: 1;
     }
     .contact-text {
+      padding: 30px 35px;
       order: 2;
       margin-top: 20px;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      // height: 170px;
+      h3 {
+        font-size: 18px;
+      }
+      i {
+        font-size: 22px;
+      }
+    }
+    .help {
+      margin-bottom: 0px;
     }
     .social {
       gap: 5%;
       width: 100%;
+      margin-top: 20px;
     }
   }
 }
