@@ -8,6 +8,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
 // $subtext:
 
 * {
+  // border: 1px solid green;
   margin: 0;
   padding: 0;
   font-family: 'Dosis', sans-serif;
@@ -202,6 +203,14 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   padding: 25px 35px;
   overflow: hidden;
   backdrop-filter: blur(40px) brightness(1.15);
+  -webkit-backdrop-filter: blur(40px) brightness(1.15);
+  -moz-backdrop-filter: blur(40px) brightness(1.15);
+  -webkit-backdrop-filter: blur(40px) brightness(1.15);
+  -webkit-backdrop-filter: blur(40px) brightness(1.15);
+  -moz-backdrop-filter: blur(40px) brightness(1.15);
+  -moz-backdrop-filter: blur(40px) brightness(1.15);
+  -webkit-backdrop-filter: blur(40px) brightness(1.15);
+  -moz-backdrop-filter: blur(40px) brightness(1.15);
   border-radius: 40px;
   box-shadow: $shadow 0px 14px 28px, $shadow-2 0px 5px 5px;
   animation: 0.3s ease-out 0s 1 moveup;
@@ -255,6 +264,8 @@ $shadow-2: rgba(0, 0, 0, 0.22);
 .menu-section {
   z-index: 1;
   backdrop-filter: blur(40px) brightness(1.15);
+  -webkit-backdrop-filter: blur(40px) brightness(1.15);
+  -moz-backdrop-filter: blur(40px) brightness(1.15);
   border-radius: 40px;
   display: flex;
   justify-content: center;
@@ -335,6 +346,8 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   .contact-form {
     padding: 35px 35px;
     backdrop-filter: blur(40px) brightness(1.15);
+    -webkit-backdrop-filter: blur(40px) brightness(1.15);
+    -moz-backdrop-filter: blur(40px) brightness(1.15);
     box-shadow: $shadow 0px 14px 28px, $shadow-2 0px 5px 5px;
     border-radius: 40px;
   }
@@ -655,7 +668,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      height: 200px;
+      // height: 170px;
     }
     .social {
       gap: 5%;
