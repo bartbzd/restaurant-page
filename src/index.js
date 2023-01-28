@@ -17,10 +17,10 @@ link.href = favicon;
 document.head.append(link);
 
 const leaves = new Image();
-const leaf = new Image();
-const cup = new Image();
 leaves.className = 'leaves';
+const leaf = new Image();
 leaf.className = 'leaf';
+const cup = new Image();
 cup.className = 'cup';
 leaves.src = Leaves;
 leaf.src = Leaf;
@@ -28,7 +28,7 @@ cup.src = Cup;
 
 const container = document.querySelector('#container');
 const content = document.createElement('div');
-container.append(header(), leaf, content, footer(), gitLeaf());
+container.append(header(), content, footer(), gitLeaf(), leaf);
 content.append(home(), cup);
 
 const nav = ['.logo', '.about', '.menu', '.contact'];
