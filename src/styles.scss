@@ -783,7 +783,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
     border-radius: 25px;
     width: 100%;
     .form {
-      height: 190px;
+      height: 200px;
     }
     .contact-form,
     .contact-text {
@@ -804,7 +804,7 @@ $shadow-2: rgba(0, 0, 0, 0.22);
       input[type='submit'] {
         width: 100px;
         height: 35px;
-        margin: 0 auto;
+        margin: 0 auto 10px auto;
         font-size: 3.5vw;
       }
       .contact-text {
@@ -816,7 +816,6 @@ $shadow-2: rgba(0, 0, 0, 0.22);
         height: min-content;
       }
       .social-icons {
-        margin-top: 10px;
         font-size: 14px;
       }
     }
