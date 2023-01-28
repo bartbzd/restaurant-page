@@ -50,10 +50,6 @@ export default function contact() {
   form.appendChild(textarea).placeholder = 'Type here...';
   formbox.appendChild(input()).type = 'submit';
   formbox.querySelector('input[type=submit]').append('Test');
-  //open hours
-  //Mon-Fri, 9-5p CST
 
   return container;
 }
-
-//var link = document.querySelector("link[rel*='icon']") || document.createElement('link');
