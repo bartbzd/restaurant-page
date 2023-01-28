@@ -17,9 +17,10 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   text-decoration: dotted;
   box-sizing: border-box;
   user-select: none;
-  body {
-    overflow: hidden;
-  }
+}
+html,
+body {
+  overflow: hidden;
 }
 #container {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
