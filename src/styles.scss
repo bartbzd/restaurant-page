@@ -26,7 +26,11 @@ body {
 #container {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
   background-position: center;
+  -webkit-background-position: center;
+  -moz-background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100vw;
@@ -330,6 +334,7 @@ body {
     user-select: none;
   }
   .fresh {
+    z-index: 1;
     color: #666968;
     font-size: 14px;
     position: absolute;
