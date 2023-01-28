@@ -42,7 +42,6 @@ function removeActive() {
     item.classList.remove('active');
   });
 }
-
 function renderHome() {
   removeActive();
   content.replaceChildren(home(), cup);
@@ -56,7 +55,6 @@ function renderAbout() {
   container.append(leaf);
   content.replaceChildren(about());
   leaf.classList.add('reverse');
-
   aboutItem.classList.add('active');
 }
 function renderMenu() {
@@ -64,19 +62,22 @@ function renderMenu() {
   container.append(leaf);
   content.replaceChildren(menu());
   leaf.classList.add('reverse');
-
   menuItem.classList.add('active');
-  container.removeChild(leaves);
+  if ([...container.children].includes(leaves)) {
+    container.removeChild(leaves);
+  }
 }
 function renderContact() {
   removeActive();
   container.append(leaf);
   content.replaceChildren(contact());
   leaf.classList.add('reverse');
-
   contactItem.classList.add('active');
-  container.removeChild(leaves);
+  if ([...container.children].includes(leaves)) {
+    container.removeChild(leaves);
+  }
 }
+
 homePage.addEventListener('click', renderHome);
 aboutItem.addEventListener('click', renderAbout);
 menuItem.addEventListener('click', renderMenu);
