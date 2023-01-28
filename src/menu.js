@@ -19,10 +19,6 @@ export default function menu() {
   for (let i = 1; i < 5; i += 1) {
     box.appendChild(div()).className = `co co-${i}`;
   }
-  //   for (let i = 1; i < 5; i += 1) {
-  //     const g = document.querySelector(`co co-${i}`);
-  //     g.append(div());
-  //   }
   for (let i = 1; i < 5; i += 1) {
     const titles = ['Mocha', 'Latte', 'Cappuccino', 'Americano'];
     const prices = ['$9', '$8', '$8', '$7'];
@@ -43,5 +39,6 @@ export default function menu() {
 
   box.appendChild(p()).className = 'fresh';
   container.querySelector('.fresh').append('*Prices subject to change');
+
   return container;
 }
