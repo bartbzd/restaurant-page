@@ -122,13 +122,16 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   border-radius: 30px;
   box-shadow: $shadow 0px 14px 28px, $shadow-2 0px 5px 5px;
 
-  transition: 0.5s;
+  transition: 0.3s;
   background-size: 200% auto;
   background-image: linear-gradient(to right, $primary 0%, $secondary 51%, $primary 100%);
   animation: 0.3s ease-in-out 0s 1 simmer;
   &:hover {
     background-position: right center;
     transform: scale(1.03);
+  }
+  &:active {
+    transform: scale(0.97);
   }
 }
 .store-wrapper {
@@ -477,6 +480,9 @@ $shadow-2: rgba(0, 0, 0, 0.22);
     &:hover {
       transform: scale(1.03);
       background-position: right center;
+    }
+    &:active {
+      transform: scale(0.97);
     }
   }
 }
