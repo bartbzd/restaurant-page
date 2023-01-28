@@ -35,9 +35,9 @@ export function gitLeaf() {
   topLeaf.className = 'git-leaf';
   wrapper.className = 'wrapper';
   a.className = 'github-link';
-  a.href = 'www.github.com';
+  a.href = 'https://github.com/bartbzd/restaurant-page';
 
-  document.body.append(wrapper); //document.querySelector('.nav-bar')
+  document.body.append(wrapper);
   wrapper.append(topLeaf);
   wrapper.append(a);
   a.append(i);

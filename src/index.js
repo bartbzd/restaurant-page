@@ -1,13 +1,20 @@
-import './styles.css';
-import Leaf from './img/only-plant.png';
-import Cup from './img/only-cup.png';
 import Leaves from './img/about-leaves.png';
 import header, { gitLeaf } from './header';
-import home from './home';
-import menu from './menu';
-import about from './about';
-import contact from './contact';
+import Leaf from './img/only-plant.png';
 import favicon from './img/favicon.png';
+import Cup from './img/only-cup.png';
+import contact from './contact';
+import footer from './footer';
+import about from './about';
+import menu from './menu';
+import home from './home';
+import './styles.css';
+
+const link = document.createElement('link');
+link.type = 'image/png';
+link.rel = 'shortcut icon';
+link.href = favicon;
+document.head.append(link);
 
 const leaves = new Image();
 const leaf = new Image();
@@ -19,19 +26,12 @@ leaves.src = Leaves;
 leaf.src = Leaf;
 cup.src = Cup;
 
-const link =
-  document.querySelector("link[rel*='icon']") || document.createElement('link');
-link.type = 'image/png';
-link.rel = 'shortcut icon';
-link.href = favicon;
-document.head.append(link);
 const container = document.querySelector('#container');
 const content = document.createElement('div');
-container.append(header(), content);
-container.append(gitLeaf(), leaf);
+container.append(header(), leaf, content, footer(), gitLeaf());
 content.append(home(), cup);
 
-const nav = ['.about', '.menu', '.contact'];
+const nav = ['.logo', '.about', '.menu', '.contact'];
 const navItems = document.querySelectorAll(nav);
 const homePage = document.querySelector('.logo');
 const aboutItem = document.querySelector('.about');
@@ -42,49 +42,38 @@ function removeActive() {
     item.classList.remove('active');
   });
 }
-function createFooter() {
-  const storeWrapper = document.createElement('div');
-  storeWrapper.className = 'store-wrapper';
-  const text = document.createElement('p');
-  text.append('Find a store');
-  text.className = 'store';
-  const a = document.createElement('a');
-  const i = () => document.createElement('i');
 
-  container.append(storeWrapper);
-  storeWrapper.appendChild(i()).className = 'fa-solid fa-location-dot fa-1x';
-  storeWrapper.append(text);
-}
-createFooter();
 function renderHome() {
-  //   content.innerHTML = '';
+  removeActive();
   content.replaceChildren(home(), cup);
   container.append(leaf);
   leaf.classList.remove('reverse');
-  removeActive();
   container.removeChild(leaves);
 }
 function renderAbout() {
+  removeActive();
   container.append(leaves);
   container.append(leaf);
   content.replaceChildren(about());
   leaf.classList.add('reverse');
-  removeActive();
+
   aboutItem.classList.add('active');
 }
 function renderMenu() {
+  removeActive();
   container.append(leaf);
   content.replaceChildren(menu());
   leaf.classList.add('reverse');
-  removeActive();
+
   menuItem.classList.add('active');
   container.removeChild(leaves);
 }
 function renderContact() {
+  removeActive();
   container.append(leaf);
   content.replaceChildren(contact());
   leaf.classList.add('reverse');
-  removeActive();
+
   contactItem.classList.add('active');
   container.removeChild(leaves);
 }
