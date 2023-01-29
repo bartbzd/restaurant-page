@@ -26,13 +26,12 @@ body {
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
-  background-position: center;
-  -webkit-background-position: center;
-  -moz-background-position: center;
+  // background-position: center;
+  // -webkit-background-position: center;
+  // -moz-background-position: center;
   background-repeat: no-repeat;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+  min-height: 100vh;
+  width: 100%;
 }
 .nav-bar {
   display: flex;
@@ -564,6 +563,9 @@ body {
   }
 }
 @media screen and (max-width: 1140px) {
+  #container {
+    background-position: 40% 20%;
+  }
   .logo {
     width: 20%;
     height: auto;
@@ -598,6 +600,9 @@ body {
   }
 }
 @media screen and (max-width: 770px) {
+  #container {
+    background-position: 55%;
+  }
   .hero-text {
     width: 90%;
   }
@@ -610,9 +615,9 @@ body {
     height: 106px;
     width: 121px;
   }
-  #container {
-    height: 100vh;
-  }
+  // #container {
+  //   // height: 100vh;
+  // }
   .cup {
     top: 30%;
     width: 80%;
@@ -716,7 +721,9 @@ body {
     height: 100vh;
     overflow-y: hidden;
   }
+
   #container {
+    background-position: 30%;
     z-index: 1;
     min-height: 100%;
     overflow: hidden;
