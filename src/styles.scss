@@ -714,6 +714,7 @@ body {
 @media screen and (max-width: 428px) {
   body {
     height: 100vh;
+    overflow-y: hidden;
   }
   #container {
     z-index: 1;
@@ -746,14 +747,13 @@ body {
     right: -25%;
   }
   .wrapper {
-    // overflow-x: hidden;
+    overflow-x: hidden;
     height: 85px;
     width: 121px;
   }
   .cup {
     width: 80%;
     top: 35%;
-    // left: 22%;
   }
   .hero-text {
     width: 90%;
