@@ -40,6 +40,10 @@ function removeActive() {
     item.classList.remove('active');
   });
 }
+window.onresize = () => {
+  document.body.height = window.innerHeight;
+};
+window.onresize();
 function renderHome() {
   removeActive();
   content.replaceChildren(home(), cup);
