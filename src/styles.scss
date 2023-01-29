@@ -15,11 +15,15 @@ $shadow-2: rgba(0, 0, 0, 0.22);
   box-sizing: border-box;
   user-select: none;
 }
-html,
+html {
+  height: -webkit-fill-available;
+}
 body {
   overflow: hidden;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  /* mobile viewport bug fix */
+  min-height: -webkit-fill-available;
 }
 #container {
   background-image: url('./img/no-leaf-no-cup-transformed.png');
