@@ -1,3 +1,5 @@
+import Leaf from './img/only-plant.png';
+
 export default function footer() {
   const storeWrapper = document.createElement('div');
   const i = () => document.createElement('i');
@@ -10,4 +12,17 @@ export default function footer() {
   storeWrapper.append(text);
 
   return storeWrapper;
+}
+
+export function bottomLeaf() {
+  const wrapper = document.createElement('div');
+  wrapper.className = 'leaf-wrapper';
+  const leaf = new Image();
+  leaf.className = 'leaf';
+  leaf.src = Leaf;
+
+  document.body.append(wrapper);
+  wrapper.append(leaf);
+
+  return wrapper;
 }

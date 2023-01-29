@@ -188,12 +188,21 @@ body {
     transform: scale(1) translateX(0);
   }
 }
-.leaf {
+.leaf-wrapper {
   position: absolute;
-  bottom: -5%;
+  left: 0;
+  bottom: 0;
+  margin-left: 25%;
+  width: 100%;
+  overflow: hidden;
+}
+.leaf {
+  z-index: 2;
+  position: relative;
   width: 60%;
-  margin-left: 20%;
+  bottom: -30px;
   animation: 0.5s ease-in-out 0s 1 wiggle;
+  overflow: hidden;
 }
 .reverse {
   animation: 0.3s ease-in-out 0s wiggle;
@@ -566,9 +575,12 @@ body {
   .wrapper {
     height: 110px;
   }
-  .leaf {
-    width: 85%;
+  .leaf-wrapper {
     margin-left: 10%;
+  }
+  .leaf {
+    width: 100%;
+    height: auto;
   }
   .main {
     margin-left: 40px;
@@ -603,18 +615,23 @@ body {
   }
   .cup {
     top: 30%;
+    width: 80%;
   }
   .order-btn {
+    z-index: 1;
     position: absolute;
-    top: 55%;
+    top: 57%;
+    margin-bottom: 20vw;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
   }
+  .leaf-wrapper {
+    margin-left: 20%;
+  }
   .leaf {
     width: 80%;
-    margin-left: 30;
   }
   .nav-items {
     margin-left: 3%;
@@ -699,7 +716,9 @@ body {
     height: 100vh;
   }
   #container {
-    min-height: 100vh;
+    z-index: 1;
+    min-height: 100%;
+    overflow: hidden;
   }
   .nav-bar {
     justify-content: center;
