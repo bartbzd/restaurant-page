@@ -698,9 +698,9 @@ body {
 }
 //MOBILE
 @media screen and (max-width: 428px) {
-  #container {
-    min-height: 140vh;
-  }
+  // #container {
+  //   min-height: 140vh;
+  // }
   .nav-bar {
     justify-content: center;
     flex-direction: column;
