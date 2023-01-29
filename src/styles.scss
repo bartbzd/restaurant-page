@@ -747,7 +747,7 @@ body {
     right: -25%;
   }
   .wrapper {
-    overflow-x: hidden;
+    // overflow-x: hidden;
     height: 85px;
     width: 121px;
   }
@@ -772,7 +772,12 @@ body {
   .store {
     font-size: 16px;
   }
+  .leaf-wrapper {
+    width: auto;
+    overflow: hidden;
+  }
   .leaf {
+    width: 110%;
     margin-left: 20%;
   }
   .menu-section,
