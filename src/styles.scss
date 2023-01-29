@@ -23,6 +23,7 @@ body {
   height: 100vh;
 }
 #container {
+  position: relative;
   background-image: url('./img/no-leaf-no-cup-transformed.png');
   background-size: cover;
   -webkit-background-size: cover;
