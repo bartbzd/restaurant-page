@@ -721,11 +721,10 @@ body {
     overflow: hidden;
   }
   .nav-bar {
-    justify-content: center;
     flex-direction: column;
     .logo {
       position: absolute;
-      top: 4%;
+      top: 20px;
       margin-left: 2%;
       justify-content: center;
       height: 50px;
