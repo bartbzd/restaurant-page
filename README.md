@@ -20,8 +20,8 @@
 
 ## Things I learned:
 
-- Working with images/filters
-- Compiling files with Webpack
-- Writing branding/product copy
+- Building CSS keyframes
+- Working with images and filters
 - Using Webpack loaders and plugins
-- Building keyframes and animation properties
+- Compiling project files with Webpack
+- Developing branding and writing copy
