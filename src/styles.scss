@@ -178,6 +178,7 @@ body {
 }
 .cup {
   width: 47%;
+  // max-width: 645px;
   position: absolute;
   top: 20%;
   right: 0;
@@ -195,7 +196,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  margin-left: 25%;
+  margin-left: 35%;
   width: 100%;
   overflow: hidden;
 }
@@ -203,6 +204,7 @@ body {
   z-index: 2;
   position: relative;
   width: 60%;
+  max-width: 865px;
   bottom: -30px;
   animation: 0.5s ease-in-out 0s 1 wiggle;
   overflow: hidden;
@@ -263,7 +265,7 @@ body {
   position: absolute;
   left: -18%;
   top: 50%;
-  width: 40%;
+  width: 35%;
   animation: 0.3s ease-in-out 0s 1 sideabout;
   transform: rotateZ(80deg);
 }
@@ -345,7 +347,6 @@ body {
     user-select: none;
   }
   .fresh {
-    z-index: 1;
     color: #666968;
     font-size: 14px;
     position: absolute;
